@@ -130,15 +130,15 @@ main {
                 }
 
                 .input-wrapper {
-                    border-radius: 30px;
+                    // border-radius: 30px;
                     border: none;
-                    border: 1px solid #8d8a8f57;
+                    border-bottom: 1px solid #8d8a8f57;
                     align-items: center;
                     padding: 2%;
                     margin: 2% 10%;
 
                     img {
-                        width: 15px;
+                        width: 20px;
                         margin-left: 2%;
                         vertical-align: middle;
                         cursor: pointer;
@@ -147,6 +147,14 @@ main {
                     input {
                         border: none;
                         margin-left: 2%;
+                        width: 90%;
+                        height: 100%;
+                        font-size: 1.1rem;
+                        color: #535154;
+
+                        &::placeholder {
+                            color: #53515475;
+                        }
                     }
                     
                 }
@@ -212,7 +220,88 @@ main {
 
     .history-wrapper {
         width: 75%;
-        background-color: blue;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 3% 2%;
+
+            .back {
+                width: 25px;
+                cursor: pointer;
+            }
+
+            .search-message {
+                display: flex;
+                font-size: 1.1rem;
+                color: #535154;
+                width: 40%;
+
+                border-radius: 30px;
+                border: none;
+                border: 1px solid #8d8a8f57;
+                align-items: center;
+                padding: 0.5% 1%;
+
+                img {
+                    width: 25px;
+                }
+
+                input {
+                    border: none;
+                    margin-left: 3%;
+                    font-size: 1.1rem;
+                    color: #535154;
+                    width: 90%;
+
+                    &::placeholder{
+                        color: #53515475;
+                    }
+                }
+
+                
+
+               
+            }
+
+            .swither-notification {
+                display: flex;
+                align-items: center;
+                margin-left: 1%;
+
+                P {
+                    color: #6F5A68;
+                    font-size: 1.1rem;
+                }
+
+            }
+
+            .user-block {
+                display: flex;
+                align-items: center;
+
+                p {
+                    font-size: 1.2rem;
+                    color: #6F5A68;
+                }
+
+                img {
+                    width: 40px;
+                }
+
+            }
+        }
+
+        .message-wrapper {
+            background-color: rgba(203, 181, 196, 0.219);
+            height: 100%;
+            border-radius: 30px 0 0 0;
+            padding: 3%;
+        }
     } //history-wrapper
 
 } //main
