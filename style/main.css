@@ -145,8 +145,94 @@ main .dialog-wrapper .contact-wrapper .last-contacts-wrapper ul .last-contact-it
 }
 
 main .dialog-wrapper .contact-wrapper .search-contacts-wrapper {
-  background-color: #6cafdb;
-  padding: 8% 10%;
+  padding-top: 8%;
+}
+
+main .dialog-wrapper .contact-wrapper .search-contacts-wrapper p {
+  padding-left: 10%;
+  color: #8d8a8f;
+  font-size: 1.1rem;
+}
+
+main .dialog-wrapper .contact-wrapper .search-contacts-wrapper .input-wrapper {
+  border-radius: 30px;
+  border: none;
+  border: 1px solid #8d8a8f57;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2%;
+  margin: 2% 10%;
+}
+
+main .dialog-wrapper .contact-wrapper .search-contacts-wrapper .input-wrapper img {
+  width: 15px;
+  margin-left: 2%;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+main .dialog-wrapper .contact-wrapper .search-contacts-wrapper .input-wrapper input {
+  border: none;
+  margin-left: 2%;
+}
+
+main .dialog-wrapper .contact-wrapper .search-contacts-wrapper ul {
+  list-style-type: none;
+  padding-top: 1%;
+}
+
+main .dialog-wrapper .contact-wrapper .search-contacts-wrapper ul .search-contact-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3% 10%;
+}
+
+main .dialog-wrapper .contact-wrapper .search-contacts-wrapper ul .search-contact-item .search-contact-item__photo {
+  width: 40px;
+  border: solid 2px #A599B5;
+  border-radius: 50%;
+  padding: 2%;
+}
+
+main .dialog-wrapper .contact-wrapper .search-contacts-wrapper ul .search-contact-item .search-contact-item-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin-left: 5%;
+}
+
+main .dialog-wrapper .contact-wrapper .search-contacts-wrapper ul .search-contact-item .search-contact-item-text .contact-name {
+  padding: 0;
+  color: #242224;
+  margin-bottom: 3%;
+}
+
+main .dialog-wrapper .contact-wrapper .search-contacts-wrapper ul .search-contact-item .search-contact-item-text .message-text {
+  padding: 0;
+}
+
+main .dialog-wrapper .contact-wrapper .search-contacts-wrapper ul .search-contact-item .notification {
+  width: 25px;
+  padding: 0;
+  margin-left: 3%;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #AE8CA3;
+  color: white;
+}
+
+main .dialog-wrapper .contact-wrapper .search-contacts-wrapper ul .search-contact-item:hover {
+  background-color: rgba(212, 216, 221, 0.267);
 }
 
 main .history-wrapper {
