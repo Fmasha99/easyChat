@@ -1,4 +1,4 @@
-html, body, p, img, input, button, div, section, span {
+html, body, p, img, input, button, div, section, span, ul, li {
     padding: 0;
     margin: 0;
 }
@@ -8,6 +8,7 @@ html {
     padding: 0;
     font-family: "Fira Sans";
     font-size: 14px;
+    color: #535154;
 }
 
 body {
@@ -38,21 +39,93 @@ main {
 
         header {
             display: flex;
-            padding-left: 10%;
-            padding-top: 8%;
+            padding: 8% 10%;
             align-items: center;
 
             img {
                 width: 50px;
             }
-            
+
             p {
                 font-family: Sofia;
                 font-size: 25px;
                 color: #A599B5;
                 margin-left: 5%;
             }
-        }
+        } //header
+
+        .contact-wrapper {
+            display: flex;
+            flex-direction: column;
+
+            .last-contacts-wrapper {
+                padding-top: 3%;
+
+                p {
+                    padding-left: 10%;
+                    color: #8d8a8f;
+                    font-size: 1.1rem;
+                }
+
+                ul {
+                    list-style-type: none;
+                    padding-top: 1%;
+                    
+
+                    .last-contact-item {
+                        display: flex;
+                        align-items: center;
+                        padding: 3% 10%;
+
+                        .last-contact-item__photo {
+                            width: 40px;
+                            border: solid 2px #A599B5;
+                            border-radius: 50%;
+                            padding: 2%;
+
+                            
+                        }
+
+                        .last-contact-item-text {
+                            display: flex;
+                            flex-direction: column;
+                            width: 100%;
+                            margin-left: 5%;
+
+                            .name-time-line {
+                                display: flex;
+                                justify-content: space-between;
+                                margin-bottom: 3%;
+
+                                .contact-name {
+                                    padding: 0;
+                                    color: #242224;;
+                                }
+
+                                .last-message-time {
+                                    padding: 0;
+                                }
+                            }
+
+                            .message-text {
+                                padding: 0;
+                            }
+                        }
+
+                        &:hover {
+                            background-color: rgba(212, 216, 221, 0.267);
+                        }
+                    } //li
+                } //ul
+            } //last-contacts-wrapper
+
+            .search-contacts-wrapper {
+                background-color: rgb(108, 175, 219);
+                padding: 8% 10%;
+
+            }
+
+        } //.contacts-wrapper
     } //dialog-wrapper
 
     .history-wrapper {
