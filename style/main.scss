@@ -17,6 +17,7 @@ body {
     display: flex;
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
 }
 
 @font-face {
@@ -76,6 +77,7 @@ main {
                         display: flex;
                         align-items: center;
                         padding: 3% 10%;
+                        overflow: hidden;
 
                         .last-contact-item__photo {
                             width: 40px;
@@ -91,6 +93,7 @@ main {
                             flex-direction: column;
                             width: 100%;
                             margin-left: 5%;
+                            overflow: hidden;
 
                             .name-time-line {
                                 display: flex;
@@ -109,6 +112,7 @@ main {
 
                             .message-text {
                                 padding: 0;
+                                overflow: hidden;
                             }
                         }
 
@@ -147,7 +151,7 @@ main {
                     input {
                         border: none;
                         margin-left: 2%;
-                        width: 90%;
+                        width: 80%;
                         height: 100%;
                         font-size: 1.1rem;
                         color: #535154;
@@ -162,12 +166,15 @@ main {
                 ul {
                     list-style-type: none;
                     padding-top: 1%;
+                    height: 40vh;
+                    overflow-y: scroll;
                     
 
                     .search-contact-item {
                         display: flex;
                         align-items: center;
                         padding: 3% 10%;
+                        overflow: hidden;
 
                         .search-contact-item__photo {
                             width: 40px;
@@ -183,6 +190,7 @@ main {
                             flex-direction: column;
                             width: 100%;
                             margin-left: 5%;
+                            overflow: hidden;
 
                             .contact-name {
                                 padding: 0;
@@ -192,6 +200,7 @@ main {
 
                             .message-text {
                                 padding: 0;
+                                overflow: hidden;
                             }
 
                             
@@ -210,6 +219,8 @@ main {
                             background-color: rgba(212, 216, 221, 0.267);
                         }
                     }
+
+                    
 
                 } //ul
 
@@ -262,16 +273,18 @@ main {
                         color: #53515475;
                     }
                 }
-
-                
-
-               
             }
 
             .swither-notification {
                 display: flex;
                 align-items: center;
                 margin-left: 1%;
+
+                img {
+                    width: 40px;
+                    margin-right: 10px;
+                    cursor: pointer;
+                }
 
                 P {
                     color: #6F5A68;
@@ -287,6 +300,7 @@ main {
                 p {
                     font-size: 1.2rem;
                     color: #6F5A68;
+                    margin-right: 5px;
                 }
 
                 img {
@@ -294,14 +308,104 @@ main {
                 }
 
             }
-        }
+        } //header
 
         .message-wrapper {
+            display: flex;
+            flex-direction: column;
             background-color: rgba(203, 181, 196, 0.219);
             height: 100%;
             border-radius: 30px 0 0 0;
             padding: 3%;
-        }
-    } //history-wrapper
 
+            .message-items-wrapper {
+                // flex: 1 0 auto;
+                height: 73%;
+                overflow-y: scroll;
+
+                ul {
+                    list-style-type: none;
+                    
+
+                    .to-message {
+                        img {
+                            width: 50px;
+                        }
+
+                        p {
+                            width: 50%;
+                            margin-left: 5%;
+                            background-color: white;
+                            padding: 1% 2%;
+                            font-size: 1.2rem;
+                            border-radius: 0 20px 20px 20px;
+                        }
+                    }
+
+                    .from-message {
+                        text-align: right;
+
+                        img {
+                            width: 50px;
+                        }
+
+                        p {
+                            width: 50%;
+                            margin-left: auto;
+                            margin-right: 5%;
+                            padding: 1% 2%;
+                            border: 1px solid #a79ab6;
+                            background-color: #a79ab6;
+                            color: white;
+                            font-size: 1.2rem;
+                            border-radius: 20px 0 20px 20px;
+                        }
+                    }
+                }
+            } //message-items-wrapper
+
+            .send-message-wrapper {
+                display: flex;
+                // flex-shrink: 0;
+                position: fixed;
+                bottom: 3%;
+                justify-content: space-between;
+                align-items: center;
+                width: 60%;
+                padding: 1% 2%;
+                margin-right: auto;
+                margin-left: auto;
+
+                background-color: white;
+                border: 1px solid #a79ab6;
+                border-radius: 20px;
+
+                .smile {
+                    width: 30px;
+                    cursor: pointer;
+
+                    &:hover {
+                        
+                    }
+                }
+
+                input {
+                    width: 80%;
+                    border: none;
+                    font-size: 1.1rem;
+                    color: #30272D;
+
+                    &::placeholder{
+                        color: #53515475;
+                        font-size: 1.1rem;
+                    }
+                }
+
+                .send-message {
+                    width: 30px;
+                    cursor: pointer;
+                }
+            } //send-message-wrapper
+        } //message-wrapper
+    } //history-wrapper
 } //main
