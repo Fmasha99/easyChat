@@ -156,6 +156,10 @@ main {
                         font-size: 1.1rem;
                         color: #535154;
 
+                        &:focus {
+                            outline: none;
+                        }
+
                         &::placeholder {
                             color: #53515475;
                         }
@@ -168,6 +172,17 @@ main {
                     padding-top: 1%;
                     height: 40vh;
                     overflow-y: scroll;
+
+                    
+                    &::-webkit-scrollbar {
+                        width: 6px;
+                        background-color: white;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        border-radius: 10px;
+                        background-color: #a79ab67e;
+                    }
                     
 
                     .search-contact-item {
@@ -269,6 +284,11 @@ main {
                     color: #535154;
                     width: 90%;
 
+                    &:focus {
+                        outline: none;
+                    }
+
+
                     &::placeholder{
                         color: #53515475;
                     }
@@ -316,53 +336,100 @@ main {
             background-color: rgba(203, 181, 196, 0.219);
             height: 100%;
             border-radius: 30px 0 0 0;
-            padding: 3%;
+            padding: 3% 2%;
+
+           
+                
 
             .message-items-wrapper {
-                // flex: 1 0 auto;
-                height: 73%;
+                list-style-type: none;
+                display: flex;
+                flex-direction: column-reverse;
+                height: 70%;
                 overflow-y: scroll;
 
-                ul {
-                    list-style-type: none;
+                &::-webkit-scrollbar {
+                    width: 6px;
+                    background-color: #f4eff2;
+                }
+    
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 10px;
+                    background-color: #a79ab631;
+                        
+                }
                     
 
-                    .to-message {
+                .to-message {
+                    .to-message-user {
+                        display: flex;
+
                         img {
                             width: 50px;
                         }
 
                         p {
-                            width: 50%;
-                            margin-left: 5%;
-                            background-color: white;
-                            padding: 1% 2%;
+                            color: #242224;
+                            border: none;
+                            background: none;
+                            margin: 0;
+                            margin-left: 2%;
                             font-size: 1.2rem;
-                            border-radius: 0 20px 20px 20px;
+                            align-self: center;
                         }
                     }
 
-                    .from-message {
-                        text-align: right;
+                    .to-message-text {
+                        display: flex;
+                        width: 50%;
+                        margin-left: 5%;
+                        background-color: white;
+                        color: #82778f;
+                        padding: 1% 2%;
+                        font-size: 1.2rem;
+                        border-radius: 0 20px 20px 20px;
 
-                        img {
-                            width: 50px;
-                        }
-
-                        p {
-                            width: 50%;
-                            margin-left: auto;
-                            margin-right: 5%;
-                            padding: 1% 2%;
-                            border: 1px solid #a79ab6;
-                            background-color: #a79ab6;
-                            color: white;
-                            font-size: 1.2rem;
-                            border-radius: 20px 0 20px 20px;
+                        .to-time {
+                            text-align: right;
+                            margin-left: 3%;
+                            align-self: flex-end;
+                            color: #c3c2c4;
                         }
                     }
                 }
-            } //message-items-wrapper
+
+                .from-message {
+                    text-align: right;
+
+                    img {
+                        width: 50px;
+                    }
+
+                    .from-message-text {
+                        display: flex;
+                        width: 50%;
+                        margin-left: auto;
+                        margin-right: 5%;
+                        padding: 1% 2%;
+                        border: 1px solid #a79ab6;
+                        background-color: #a79ab6;
+                        color: white;
+                        font-size: 1.2rem;
+                        border-radius: 20px 0 20px 20px;
+
+                        p {
+                            text-align: left;
+                        }
+
+                        .from-time {
+                            text-align: right;
+                            margin-left: 3%;
+                            align-self: flex-end;
+                            color: #d5d3d6;
+                        }
+                    }
+                }
+            }//message-items-wrapper
 
             .send-message-wrapper {
                 display: flex;
@@ -373,8 +440,8 @@ main {
                 align-items: center;
                 width: 60%;
                 padding: 1% 2%;
-                margin-right: auto;
-                margin-left: auto;
+                left: 50%;
+                transform: translateX(-30%);
 
                 background-color: white;
                 border: 1px solid #a79ab6;
@@ -395,6 +462,11 @@ main {
                     font-size: 1.1rem;
                     color: #30272D;
 
+                    &:focus {
+                        outline: none;
+                    }
+
+
                     &::placeholder{
                         color: #53515475;
                         font-size: 1.1rem;
@@ -409,3 +481,7 @@ main {
         } //message-wrapper
     } //history-wrapper
 } //main
+
+.active-contact {
+    background-color: #f4eff2;
+}

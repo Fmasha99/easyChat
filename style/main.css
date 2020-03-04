@@ -184,6 +184,10 @@ main .dialog-wrapper .contact-wrapper .search-contacts-wrapper .input-wrapper in
   color: #535154;
 }
 
+main .dialog-wrapper .contact-wrapper .search-contacts-wrapper .input-wrapper input:focus {
+  outline: none;
+}
+
 main .dialog-wrapper .contact-wrapper .search-contacts-wrapper .input-wrapper input::-webkit-input-placeholder {
   color: #53515475;
 }
@@ -205,6 +209,16 @@ main .dialog-wrapper .contact-wrapper .search-contacts-wrapper ul {
   padding-top: 1%;
   height: 40vh;
   overflow-y: scroll;
+}
+
+main .dialog-wrapper .contact-wrapper .search-contacts-wrapper ul::-webkit-scrollbar {
+  width: 6px;
+  background-color: white;
+}
+
+main .dialog-wrapper .contact-wrapper .search-contacts-wrapper ul::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #a79ab67e;
 }
 
 main .dialog-wrapper .contact-wrapper .search-contacts-wrapper ul .search-contact-item {
@@ -321,6 +335,10 @@ main .history-wrapper header .search-message input {
   width: 90%;
 }
 
+main .history-wrapper header .search-message input:focus {
+  outline: none;
+}
+
 main .history-wrapper header .search-message input::-webkit-input-placeholder {
   color: #53515475;
 }
@@ -388,40 +406,87 @@ main .history-wrapper .message-wrapper {
   background-color: rgba(203, 181, 196, 0.219);
   height: 100%;
   border-radius: 30px 0 0 0;
-  padding: 3%;
+  padding: 3% 2%;
 }
 
 main .history-wrapper .message-wrapper .message-items-wrapper {
-  height: 73%;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  height: 70%;
   overflow-y: scroll;
 }
 
-main .history-wrapper .message-wrapper .message-items-wrapper ul {
-  list-style-type: none;
+main .history-wrapper .message-wrapper .message-items-wrapper::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f4eff2;
 }
 
-main .history-wrapper .message-wrapper .message-items-wrapper ul .to-message img {
+main .history-wrapper .message-wrapper .message-items-wrapper::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #a79ab631;
+}
+
+main .history-wrapper .message-wrapper .message-items-wrapper .to-message .to-message-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .history-wrapper .message-wrapper .message-items-wrapper .to-message .to-message-user img {
   width: 50px;
 }
 
-main .history-wrapper .message-wrapper .message-items-wrapper ul .to-message p {
+main .history-wrapper .message-wrapper .message-items-wrapper .to-message .to-message-user p {
+  color: #242224;
+  border: none;
+  background: none;
+  margin: 0;
+  margin-left: 2%;
+  font-size: 1.2rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+main .history-wrapper .message-wrapper .message-items-wrapper .to-message .to-message-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 50%;
   margin-left: 5%;
   background-color: white;
+  color: #82778f;
   padding: 1% 2%;
   font-size: 1.2rem;
   border-radius: 0 20px 20px 20px;
 }
 
-main .history-wrapper .message-wrapper .message-items-wrapper ul .from-message {
+main .history-wrapper .message-wrapper .message-items-wrapper .to-message .to-message-text .to-time {
+  text-align: right;
+  margin-left: 3%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  color: #c3c2c4;
+}
+
+main .history-wrapper .message-wrapper .message-items-wrapper .from-message {
   text-align: right;
 }
 
-main .history-wrapper .message-wrapper .message-items-wrapper ul .from-message img {
+main .history-wrapper .message-wrapper .message-items-wrapper .from-message img {
   width: 50px;
 }
 
-main .history-wrapper .message-wrapper .message-items-wrapper ul .from-message p {
+main .history-wrapper .message-wrapper .message-items-wrapper .from-message .from-message-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 50%;
   margin-left: auto;
   margin-right: 5%;
@@ -431,6 +496,18 @@ main .history-wrapper .message-wrapper .message-items-wrapper ul .from-message p
   color: white;
   font-size: 1.2rem;
   border-radius: 20px 0 20px 20px;
+}
+
+main .history-wrapper .message-wrapper .message-items-wrapper .from-message .from-message-text p {
+  text-align: left;
+}
+
+main .history-wrapper .message-wrapper .message-items-wrapper .from-message .from-message-text .from-time {
+  text-align: right;
+  margin-left: 3%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  color: #d5d3d6;
 }
 
 main .history-wrapper .message-wrapper .send-message-wrapper {
@@ -447,8 +524,9 @@ main .history-wrapper .message-wrapper .send-message-wrapper {
           align-items: center;
   width: 60%;
   padding: 1% 2%;
-  margin-right: auto;
-  margin-left: auto;
+  left: 50%;
+  -webkit-transform: translateX(-30%);
+          transform: translateX(-30%);
   background-color: white;
   border: 1px solid #a79ab6;
   border-radius: 20px;
@@ -464,6 +542,10 @@ main .history-wrapper .message-wrapper .send-message-wrapper input {
   border: none;
   font-size: 1.1rem;
   color: #30272D;
+}
+
+main .history-wrapper .message-wrapper .send-message-wrapper input:focus {
+  outline: none;
 }
 
 main .history-wrapper .message-wrapper .send-message-wrapper input::-webkit-input-placeholder {
@@ -489,5 +571,9 @@ main .history-wrapper .message-wrapper .send-message-wrapper input::placeholder 
 main .history-wrapper .message-wrapper .send-message-wrapper .send-message {
   width: 30px;
   cursor: pointer;
+}
+
+.active-contact {
+  background-color: #f4eff2;
 }
 /*# sourceMappingURL=main.css.map */
