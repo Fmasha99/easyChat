@@ -149,6 +149,16 @@ main .dialog-wrapper .contact-wrapper .last-contacts-wrapper ul .last-contact-it
 }
 
 main .dialog-wrapper .contact-wrapper .search-contacts-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding-top: 8%;
 }
 
@@ -207,8 +217,10 @@ main .dialog-wrapper .contact-wrapper .search-contacts-wrapper .input-wrapper in
 main .dialog-wrapper .contact-wrapper .search-contacts-wrapper ul {
   list-style-type: none;
   padding-top: 1%;
-  height: 40vh;
   overflow-y: scroll;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
 main .dialog-wrapper .contact-wrapper .search-contacts-wrapper ul::-webkit-scrollbar {
@@ -558,7 +570,7 @@ main .history-wrapper .message-wrapper .send-message-wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 60%;
+  width: 95%;
   padding: 1% 2%;
   margin-left: auto;
   margin-right: auto;
