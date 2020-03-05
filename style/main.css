@@ -438,19 +438,23 @@ main .history-wrapper .message-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: rgba(203, 181, 196, 0.219);
-  height: 100%;
   border-radius: 30px 0 0 0;
-  padding: 3% 2%;
+  padding: 2%;
 }
 
 main .history-wrapper .message-wrapper .message-items-wrapper {
   list-style-type: none;
-  height: 70%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
   overflow-y: scroll;
 }
 
@@ -546,8 +550,8 @@ main .history-wrapper .message-wrapper .send-message-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: fixed;
-  bottom: 3%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -556,9 +560,9 @@ main .history-wrapper .message-wrapper .send-message-wrapper {
           align-items: center;
   width: 60%;
   padding: 1% 2%;
-  left: 50%;
-  -webkit-transform: translateX(-30%);
-          transform: translateX(-30%);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
   background-color: white;
   border: 1px solid #a79ab6;
   border-radius: 20px;

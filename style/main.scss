@@ -369,18 +369,18 @@ main {
 
         .message-wrapper {
             display: flex;
+            flex-grow: 1;
             flex-direction: column;
             background-color: rgba(203, 181, 196, 0.219);
-            height: 100%;
             border-radius: 30px 0 0 0;
-            padding: 3% 2%;
+            padding: 2%;
 
            
                 
 
             .message-items-wrapper {
                 list-style-type: none;
-                height: 70%;
+                flex: 1 0 0;
                 overflow-y: scroll;
 
                 &::-webkit-scrollbar {
@@ -468,15 +468,14 @@ main {
 
             .send-message-wrapper {
                 display: flex;
-                // flex-shrink: 0;
-                position: fixed;
-                bottom: 3%;
+                flex-shrink: 0;
                 justify-content: space-between;
                 align-items: center;
                 width: 60%;
                 padding: 1% 2%;
-                left: 50%;
-                transform: translateX(-30%);
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 1%;
 
                 background-color: white;
                 border: 1px solid #a79ab6;
