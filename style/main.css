@@ -365,10 +365,49 @@ main .history-wrapper header .swither-notification {
   margin-left: 1%;
 }
 
-main .history-wrapper header .swither-notification img {
-  width: 40px;
-  margin-right: 10px;
+main .history-wrapper header .swither-notification input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+main .history-wrapper header .swither-notification label {
   cursor: pointer;
+  text-indent: -9999px;
+  width: 45px;
+  height: 30px;
+  background: #f4eff2;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+  margin-right: 10px;
+}
+
+main .history-wrapper header .swither-notification label:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 90px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+main .history-wrapper header .swither-notification input:checked + label {
+  background: #a79ab6;
+}
+
+main .history-wrapper header .swither-notification input:checked + label:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+main .history-wrapper header .swither-notification label:active:after {
+  width: 40px;
 }
 
 main .history-wrapper header .swither-notification P {
@@ -411,13 +450,6 @@ main .history-wrapper .message-wrapper {
 
 main .history-wrapper .message-wrapper .message-items-wrapper {
   list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
   height: 70%;
   overflow-y: scroll;
 }
@@ -538,7 +570,7 @@ main .history-wrapper .message-wrapper .send-message-wrapper .smile {
 }
 
 main .history-wrapper .message-wrapper .send-message-wrapper input {
-  width: 80%;
+  width: 90%;
   border: none;
   font-size: 1.1rem;
   color: #30272D;

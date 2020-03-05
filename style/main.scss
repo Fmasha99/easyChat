@@ -300,10 +300,47 @@ main {
                 align-items: center;
                 margin-left: 1%;
 
-                img {
-                    width: 40px;
-                    margin-right: 10px;
+                input[type=checkbox]{
+                    height: 0;
+                    width: 0;
+                    visibility: hidden;
+                }
+                
+                label {
                     cursor: pointer;
+                    text-indent: -9999px;
+                    width: 45px;
+                    height: 30px;
+                    background: #f4eff2;
+                    display: block;
+                    border-radius: 100px;
+                    position: relative;
+                    margin-right: 10px;
+                }
+                
+                label:after {
+                    content: '';
+                    position: absolute;
+                    top: 5px;
+                    left: 5px;
+                    width: 20px;
+                    height: 20px;
+                    background: #fff;
+                    border-radius: 90px;
+                    transition: 0.3s;
+                }
+                
+                input:checked + label {
+                    background: #a79ab6;
+                }
+                
+                input:checked + label:after {
+                    left: calc(100% - 5px);
+                    transform: translateX(-100%);
+                }
+                
+                label:active:after {
+                    width: 40px;
                 }
 
                 P {
@@ -343,8 +380,6 @@ main {
 
             .message-items-wrapper {
                 list-style-type: none;
-                display: flex;
-                flex-direction: column-reverse;
                 height: 70%;
                 overflow-y: scroll;
 
@@ -457,7 +492,7 @@ main {
                 }
 
                 input {
-                    width: 80%;
+                    width: 90%;
                     border: none;
                     font-size: 1.1rem;
                     color: #30272D;
