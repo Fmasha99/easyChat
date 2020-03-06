@@ -293,6 +293,7 @@ main .dialog-wrapper .contact-wrapper .search-contacts-wrapper ul .search-contac
   text-align: center;
   background-color: #AE8CA3;
   color: white;
+  cursor: pointer;
 }
 
 main .dialog-wrapper .contact-wrapper .search-contacts-wrapper ul .search-contact-item:hover {
@@ -429,7 +430,7 @@ main .history-wrapper header .swither-notification input:checked + label:after {
 }
 
 main .history-wrapper header .swither-notification label:active:after {
-  width: 40px;
+  width: 35px;
 }
 
 main .history-wrapper header .swither-notification P {
@@ -470,6 +471,17 @@ main .history-wrapper .message-wrapper {
   background-color: rgba(203, 181, 196, 0.219);
   border-radius: 30px 0 0 0;
   padding: 2%;
+}
+
+main .history-wrapper .message-wrapper .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  background-color: #a79ab63d;
+  padding: 0.5% 1%;
+  border-radius: 30px;
+  left: 50%;
 }
 
 main .history-wrapper .message-wrapper .message-items-wrapper {
@@ -518,6 +530,7 @@ main .history-wrapper .message-wrapper .message-items-wrapper .to-message .to-me
   display: flex;
   width: 50%;
   margin-left: 5%;
+  margin-top: 3px;
   background-color: white;
   color: #82778f;
   padding: 1% 2%;
@@ -537,7 +550,7 @@ main .history-wrapper .message-wrapper .message-items-wrapper .from-message {
   text-align: right;
 }
 
-main .history-wrapper .message-wrapper .message-items-wrapper .from-message img {
+main .history-wrapper .message-wrapper .message-items-wrapper .from-message .own-photo {
   width: 50px;
 }
 
@@ -548,6 +561,7 @@ main .history-wrapper .message-wrapper .message-items-wrapper .from-message .fro
   width: 50%;
   margin-left: auto;
   margin-right: 5%;
+  margin-top: 3px;
   padding: 1% 2%;
   border: 1px solid #a79ab6;
   background-color: #a79ab6;

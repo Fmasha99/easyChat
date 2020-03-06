@@ -234,6 +234,7 @@ main {
                             text-align: center;
                             background-color: #AE8CA3;
                             color: white;
+                            cursor: pointer;
                         }
 
                         &:hover {
@@ -341,7 +342,7 @@ main {
                 }
                 
                 label:active:after {
-                    width: 40px;
+                    width: 35px;
                 }
 
                 P {
@@ -376,8 +377,14 @@ main {
             border-radius: 30px 0 0 0;
             padding: 2%;
 
-           
-                
+            .date {
+                display: flex;
+                position: absolute;
+                background-color: #a79ab63d;
+                padding: 0.5% 1%;
+                border-radius: 30px;
+                left: 50%;
+            }
 
             .message-items-wrapper {
                 list-style-type: none;
@@ -419,6 +426,7 @@ main {
                         display: flex;
                         width: 50%;
                         margin-left: 5%;
+                        margin-top: 3px;
                         background-color: white;
                         color: #82778f;
                         padding: 1% 2%;
@@ -437,7 +445,7 @@ main {
                 .from-message {
                     text-align: right;
 
-                    img {
+                    .own-photo {
                         width: 50px;
                     }
 
@@ -446,6 +454,7 @@ main {
                         width: 50%;
                         margin-left: auto;
                         margin-right: 5%;
+                        margin-top: 3px;
                         padding: 1% 2%;
                         border: 1px solid #a79ab6;
                         background-color: #a79ab6;

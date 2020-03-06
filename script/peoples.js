@@ -1,25 +1,15 @@
 let peoples = {
-    objects: [{
-            name: 'Кафе Gruzin.by',
-            type: 'Еда',
-            synonyms: 'кафе грузин.бай, кафе gruzin.by, еда, обеды',
-            adress: 'Ложинская, 4',
-            x: 53.946957,
-            y: 27.684015,
-            logo: '/partners/gruzin.jpg',
-            link: 'https://gruzin.by',
-            percent: 'От 10%',
-            discount: `
-                При заказе в заведении (на месте или навынос) после 15.00 к любому заказу больше 10 BYN бонус на выбор:
-                <br />• бесплатный салат тбилисури/цезаридзе
-                <br />• или бесплатный суп сванский/чихиртма
-                <br />• или бесплатный десерт
-                <br />
-                <br />
-                При заказе доставки в любое время:
-                <br />• 10% скидка на все
-                <br />• бесплатная доставка от 20 BYN <s>30 BYN</s> при заказе в один из офисов SoftClub. И ещё и баночка Боржоми в подарок
-                `
+    tanyaNoskova: [{
+            name: 'Tanya Noskova',
+            online: '13 min ago',
+            messages: [
+                {
+                    message: 'As distrusts behaviour abilities defective is. Never at water me might. On formed merits hunted unable merely by mr whence or. Possession the unpleasing simplicity her uncommonly.'
+                },
+                {
+                    message: ''
+                }
+            ]
         },
         {
             name: 'Кафе Terra Pizza',

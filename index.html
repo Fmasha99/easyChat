@@ -135,6 +135,9 @@
                 </div>
             </header>
             <div class="message-wrapper">
+                <div class="date">
+                    6 march
+                </div>
                     <ul class="message-items-wrapper">
                         <li class="message to-message">
                             <div class="to-message-user">
@@ -147,7 +150,7 @@
                             </div>
                         </li>
                         <li class="message from-message">
-                            <img src="/assets/img/person.png">
+                            <img src="/assets/img/person.png" class="own-photo">
                             <div class="from-message-text">
                                 <p>As distrusts behaviour abilities defective is. Never at water me might. On formed merits hunted unable merely by mr 
                                     whence or. Possession the unpleasing simplicity her uncommonly. </p>
@@ -165,7 +168,7 @@
                             </div>
                         </li>
                         <li class="message from-message">
-                            <img src="/assets/img/person.png">
+                            <img src="/assets/img/person.png"  class="own-photo">
                             <div class="from-message-text">
                                 <p>As distrusts behaviour abilities defective is. Never at water me might. On formed merits hunted unable merely by mr 
                                     whence or. Possession the unpleasing simplicity her uncommonly. </p>
@@ -183,7 +186,7 @@
                             </div>
                         </li>
                         <li class="message from-message">
-                            <img src="/assets/img/person.png">
+                            <img src="/assets/img/person.png"  class="own-photo">
                             <div class="from-message-text">
                                 <p>As distrusts behaviour abilities defective is. Never at water me might. On formed merits hunted unable merely by mr 
                                     whence or. Possession the unpleasing simplicity her uncommonly. </p>
@@ -201,8 +204,15 @@
                             </div>
                         </li>
                         <li class="message from-message">
-                            <img src="/assets/img/person.png">
+                            <img src="/assets/img/person.png" class="own-photo">
                             <div class="from-message-text">
+                                <p>As distrusts behaviour abilities defective is. Never at water me might. On formed merits hunted unable merely by mr 
+                                    whence or. Possession the unpleasing simplicity her uncommonly. </p>
+                                <p class="from-time">13:47</p>
+                            </div>
+                        </li>
+                        <li class="message from-message">
+                            <div class="from-message-text" class="own-photo">
                                 <p>As distrusts behaviour abilities defective is. Never at water me might. On formed merits hunted unable merely by mr 
                                     whence or. Possession the unpleasing simplicity her uncommonly. </p>
                                 <p class="from-time">13:47</p>
@@ -213,8 +223,8 @@
 
                 <div class="send-message-wrapper">
                     <img src="/assets/img/smile.png" class="smile">
-                    <input type="text" placeholder="Type your message">
-                    <img src="/assets/img/send.png" class="send-message">
+                    <input type="text" placeholder="Type your message" id="input-message">
+                    <img src="/assets/img/send.png" class="send-message" id="send-message">
                 </div>
             </div>
 
@@ -226,6 +236,8 @@
     </footer>
 
     <script src="script/peoples.js"></script>
-
+    <script>
+        console.log(peoples.tanyaNoskova[0].messages[0])
+    </script>
 </body>
 </html>
