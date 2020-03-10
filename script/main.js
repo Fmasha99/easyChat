@@ -34,12 +34,14 @@ function addMessage () {
                     <p class="from-time" id="time">${time}</p>
                 </div>
             `
-            console.log('add-message');
-
-           
 
             document.getElementById('message-items-wrapper').appendChild(createMesage);
+            clearInputField();
             createMesage.scrollIntoView();
         })
     }
+}
+
+function clearInputField () {
+    document.getElementById('input-message').value = '';
 }
