@@ -578,7 +578,7 @@ main .history-wrapper .message-wrapper .message-items-wrapper .from-message .fro
   border-radius: 20px 0 20px 20px;
 }
 
-main .history-wrapper .message-wrapper .message-items-wrapper .from-message .from-message-text p {
+main .history-wrapper .message-wrapper .message-items-wrapper .from-message .from-message-text .text-message {
   text-align: left;
 }
 
