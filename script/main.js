@@ -15,32 +15,62 @@ function addMessage () {
     let sendMessageButton = document.getElementById('send-message');
     let inputMessageArea = document.getElementById('input-message');
    
+ 
+            sendMessageButton.addEventListener('click', ()=> {
+                if (inputMessageArea.value !== '') {
+                    let createMesage = document.createElement('li');
+                    createMesage.className = 'message from-message';
+                    let messageValue =  inputMessageArea.value;
+                    let time = new Date().toLocaleString('ru-RU', {
+                        hour: "numeric", 
+                        minute: "numeric"
+                    })
+                     
+                    createMesage.innerHTML = `
+                    
+                        <div class="from-message-text">
+                            <p>${messageValue}</p>
+                            <p class="from-time" id="time">${time}</p>
+                        </div>
+                    `
+        
+                    document.getElementById('message-items-wrapper').appendChild(createMesage);
+                    clearInputField();
+                    createMesage.scrollIntoView();
+                    console.log('click');
+                }
+            }) //addEventListener 
     
-   
-    if (inputMessageArea != '') {
-        sendMessageButton.addEventListener('click', ()=> {
-            let createMesage = document.createElement('li');
-            createMesage.className = 'message from-message';
-            let messageValue =  inputMessageArea.value;
-            let time = new Date().toLocaleString('ru-RU', {
-                hour: "numeric", 
-                minute: "numeric"
-            })
-             
-            createMesage.innerHTML = `
-            
-                <div class="from-message-text">
-                    <p>${messageValue}</p>
-                    <p class="from-time" id="time">${time}</p>
-                </div>
-            `
+    inputMessageArea.addEventListener('keyup', function(event) {
+        if (event.keyCode == 13) {
+            if (inputMessageArea.value !== '') {
+                let createMesage = document.createElement('li');
+                createMesage.className = 'message from-message';
+                let messageValue =  inputMessageArea.value;
+                let time = new Date().toLocaleString('ru-RU', {
+                    hour: "numeric", 
+                    minute: "numeric"
+                })
+                 
+                createMesage.innerHTML = `
+                
+                    <div class="from-message-text">
+                        <p>${messageValue}</p>
+                        <p class="from-time" id="time">${time}</p>
+                    </div>
+                `
+    
+                document.getElementById('message-items-wrapper').appendChild(createMesage);
+                clearInputField();
+                createMesage.scrollIntoView();
+            }
+            console.log('enter');
 
-            document.getElementById('message-items-wrapper').appendChild(createMesage);
-            clearInputField();
-            createMesage.scrollIntoView();
-        })
-    }
-}
+            sendMessageButton.click();
+        }
+    })
+    
+} //addMessage ()
 
 function clearInputField () {
     document.getElementById('input-message').value = '';
