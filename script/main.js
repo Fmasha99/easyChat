@@ -1,8 +1,12 @@
 
-    scrollToLastMessage();
-    addMessage();
-    let mass = localStorage.getItem('message')
-    let readyMass = mass.split(',')
+scrollToLastMessage();
+
+// let mass = localStorage.getItem('message')
+// let readyMass = mass.split(',')
+let itemsArray = [];
+
+localStorage.setItem('items', itemsArray);
+const data = localStorage.getItem('items');
 
 
 function scrollToLastMessage () {
@@ -13,7 +17,6 @@ function scrollToLastMessage () {
 }
 
 let addPost = (post) => {
-    console.log(post)
     if (post !== '') {
         let createMesage = document.createElement('li');
         createMesage.className = 'message from-message';
@@ -30,78 +33,23 @@ let addPost = (post) => {
             </div>
         `
 
-        document.getElementById('message-items-wrapper').appendChild(createMesage);
+        document.getElementById('message-items-wrapper').appendChild(createMesage); 
         
-        readyMass.push(post)
-        console.log(readyMass)
+        // localStorage.setItem('message', post);
+        itemsArray.push(post)
+        console.log(itemsArray)
         clearInputField();
         createMesage.scrollIntoView();
     }
-}
+} //addPost()
 
-function addMessage () {
-    let sendMessageButton = document.getElementById('send-message');
-    let inputMessageArea = document.getElementById('input-message');
-   
- 
 
-    // sendMessageButton.addEventListener('click', ()=> {
-    //     if (inputMessageArea.value !== '') {
-    //         let createMesage = document.createElement('li');
-    //         createMesage.className = 'message from-message';
-    //         let messageValue =  inputMessageArea.value;
-    //         let time = new Date().toLocaleString('ru-RU', {
-    //             hour: "numeric", 
-    //             minute: "numeric"
-    //         })
-                     
-    //         createMesage.innerHTML = `
-                    
-    //             <div class="from-message-text">
-    //                 <p>${messageValue}</p>
-    //                 <p class="from-time" id="time">${time}</p>
-    //             </div>
-    //         `
-        
-    //         document.getElementById('message-items-wrapper').appendChild(createMesage);
-                    
-    //         readyMass.push(inputMessageArea.value)
-    //         console.log(readyMass)
-    //         clearInputField();
-    //         createMesage.scrollIntoView();
-    //     }
-    //}) //addEventListener 
-    
-    // inputMessageArea.addEventListener('keyup', function(event) {
-    //     if (event.keyCode == 13) {
-    //         if (inputMessageArea.value !== '') {
-    //             let createMesage = document.createElement('li');
-    //             createMesage.className = 'message from-message';
-    //             let messageValue =  inputMessageArea.value;
-    //             let time = new Date().toLocaleString('ru-RU', {
-    //                 hour: "numeric", 
-    //                 minute: "numeric"
-    //             })
-                 
-    //             createMesage.innerHTML = `
-                
-    //                 <div class="from-message-text">
-    //                     <p>${messageValue}</p>
-    //                     <p class="from-time" id="time">${time}</p>
-    //                 </div>
-    //             `
-    
-    //             document.getElementById('message-items-wrapper').appendChild(createMesage);
-    //             clearInputField();
-    //             createMesage.scrollIntoView();
-    //         }
-    //         console.log('enter');
-
-    //         sendMessageButton.click();
-    //     }
-    // })
-    
-} //addMessage ()
+//add message to history by press enter
+document.getElementById('input-message').addEventListener('keyup', function(event) {
+    if (event.keyCode == 13) {
+        addPost(document.getElementById('input-message').value)
+    }
+})
 
 function clearInputField () {
     document.getElementById('input-message').value = '';
